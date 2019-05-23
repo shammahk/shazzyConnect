@@ -1,0 +1,13 @@
+%recipient {
+    float: left;
+    text-align: left;
+    background: $primary-bg ;
+    color: $receipient-text;
+}
+
+%sent {
+    float: right;
+    text-align: right;
+    background: $highlight;
+    color: $primary-bg;
+}

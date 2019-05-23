@@ -1,0 +1,12 @@
+div.slides {
+  display: grid;
+  grid-template-columns: 100px;
+  grid-auto-columns: 100px;
+  gap: 10px;
+}
+
+div.slides div.slide {
+  position: relative;
+  width: 100px;
+  height: 200px;
+}

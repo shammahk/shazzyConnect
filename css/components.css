@@ -1,0 +1,281 @@
+div.msg-cont div.msg.received {
+  float: left;
+  text-align: left;
+  background: white;
+  color: rgba(28, 34, 45, 0.7);
+}
+
+div.msg-cont div.msg.sent {
+  float: right;
+  text-align: right;
+  background: rgba(47, 128, 236, 0.6);
+  color: white;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  background: #f5f5f5;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: white;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #1c222d;
+  border-radius: 10px;
+  width: 8px;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+}
+
+div.slides {
+  display: grid;
+  grid-template-columns: 100px;
+  grid-template-rows: 150px;
+  grid-auto-flow: column;
+  gap: 10px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+div.slides div.slide {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1), 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 0 10px;
+  font-size: 0.9em;
+}
+div.slides div.slide h5 {
+  min-height: 30px;
+}
+div.slides div.slide div.pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background: #f7f8fc;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+div.slides div.slide div.pic img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+div.slides div.slide p.lastSeen {
+  font-size: 0.7em;
+  margin: 5px 0 10px;
+}
+div.slides div.slide div.convo {
+  min-width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.slides div.slide div.convo .videoCall {
+  background: #2f80ec;
+  border-radius: 5px;
+  height: 28px;
+  width: 28px;
+  text-align: center;
+}
+div.slides div.slide div.convo .videoCall img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+div.slides div.slide div.convo .videoCall:hover {
+  cursor: pointer;
+}
+div.slides div.slide div.convo p {
+  font-size: 1.5em;
+}
+div.slides div.slide div.convo p:hover {
+  color: #2f80ec;
+  transform: scale(1.1);
+}
+div.slides div.slide:hover {
+  background: rgba(47, 128, 236, 0.6);
+}
+
+.orange {
+  background: #ff4b4b !important;
+}
+
+div.contacts {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-flow: row;
+  width: 100%;
+  max-height: 300px;
+  overflow: auto;
+}
+div.contacts > .contact {
+  display: flex;
+  max-height: 50px;
+  max-width: 100%;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+  border-bottom: solid 1px #cacdd1;
+}
+div.contacts > .contact .left {
+  display: flex;
+  align-items: center;
+}
+div.contacts > .contact .pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background: #f7f8fc;
+  overflow: hidden;
+}
+div.contacts > .contact .pic img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+div.contacts > .contact div.profile h5 {
+  color: #1c222d;
+}
+div.contacts > .contact div.profile p {
+  font-size: 0.6em;
+  color: #cacdd1;
+}
+div.contacts > .contact .options {
+  font-size: 1.4em;
+}
+div.contacts > .contact .options p {
+  height: 35px;
+  line-height: 30px;
+}
+div.contacts > .contact:hover {
+  background: rgba(47, 128, 236, 0.6);
+}
+
+div.chat .header {
+  display: flex;
+  height: 60px;
+  min-width: 100%;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+  background: #f2f3ff;
+}
+div.chat .header .left {
+  display: flex;
+  align-items: center;
+}
+div.chat .header .pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background: #f7f8fc;
+  overflow: hidden;
+}
+div.chat .header .pic img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+div.chat .header div.profile h5 {
+  color: #1c222d;
+}
+div.chat .header div.profile p {
+  font-size: 0.6em;
+  color: #cacdd1;
+}
+div.chat .header .options {
+  font-size: 1.4em;
+  display: flex;
+}
+div.chat .header .options div {
+  height: 30px;
+  width: 30px;
+  background: #2f80ec;
+  margin-left: 5px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+div.chat .header .options div img {
+  height: 24px;
+  width: 24px;
+  object-fit: cover;
+}
+
+div.msg-cont {
+  width: 100%;
+  min-height: 70vh;
+  max-height: 70vh;
+  padding: 20px;
+  overflow-y: auto;
+}
+div.msg-cont div.msg {
+  width: fit-content;
+  max-width: 80%;
+  min-height: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  clear: both;
+}
+div.msg-cont div.msg p {
+  font-size: 0.8em;
+  overflow-wrap: normal;
+}
+
+div.msgInput {
+  display: flex;
+  min-width: 80%;
+  max-width: 90%;
+  min-height: 40px;
+  margin: 0 auto;
+}
+div.msgInput input, div.msgInput textarea {
+  width: 90%;
+  min-height: 30px;
+  padding: 0 10px;
+  margin-right: 5px;
+  border: solid 1px rgba(47, 128, 236, 0.6);
+  background: white;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  padding: 5px 10px;
+  resize: none;
+}
+div.msgInput > div {
+  background: #2f80ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 0 10px 10px 0;
+}
+div.msgInput > div img {
+  width: 24px;
+  height: 24px;
+  transform: rotate(0);
+  transition: 0.5s;
+}
+div.msgInput > div:hover img {
+  transform: rotate(-45deg);
+}
+div.msgInput > div.focus img {
+  transform: translateY(50px);
+}
+
+/*# sourceMappingURL=components.css.map */

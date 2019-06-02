@@ -1,6 +1,19 @@
 let msgCont = document.querySelector("div .msg-cont");
 
+let name = 'Smith John'
 
+function typing() {
+    let notice = document.createElement("div");
+    msgCont.appendChild(notice);
+    notice.className = 'msg';
+    notice.innerHTML = `<p> ${name} is typing ... <p>` ;
+    notice.scrollIntoView(true);
+
+    setTimeout(() => {
+        notice.style.display = 'none';
+        respond();
+    }, 5000);
+}
 
 function sendMsg() {
     let newMsg = document.getElementById("newMsg");
@@ -17,7 +30,9 @@ function sendMsg() {
     message.scrollIntoView(true);
     newMsg.value = "";
 
-    respond();
+    setTimeout(() => {
+        typing()
+    }, 2000); 
     // console.log(message.childNodes.item(1).value);
 }
 
